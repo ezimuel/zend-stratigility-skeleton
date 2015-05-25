@@ -1,0 +1,21 @@
+{
+    "name": "zendframework/zend-stratigility-skeleton",
+    "description": "Middleware skeleton for PHP",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "http",
+        "psr-7",
+        "middleware"
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ezimuel/zend-stratigility"
+        }
+    ],
+    "require": {
+        "zendframework/zend-diactoros": "~1.0",
+        "zendframework/zend-stratigility": "dev-feature/template"
+    }
+}
