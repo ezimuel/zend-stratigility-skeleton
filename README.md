@@ -1,8 +1,7 @@
-# stratigility-skeleton
+# zend-stratigility-skeleton
 
-This is a proposal for a middleware skeleton application based on
+This is a proposal for a middleware PHP web application based on
 [zend-stratigility](https://github.com/zendframework/zend-stratigility) component.
-
 
 Install the skeleton
 ====================
@@ -17,7 +16,7 @@ php composer.phar install
 Run the skeleton
 ================
 
-To run the skeleton application you need to expose the `/public` folder using a
+To run the skeleton application you need to publish the `/public` folder using a
 web server. You can also use the PHP internal web server running the
 following command:
 
@@ -25,4 +24,12 @@ following command:
 php -S 0.0.0.0:8000 -t public
 ```
 
-You can see the application opening a browser to `http://localhost:8000`.
+You can see the application running in a browser at `http://localhost:8000`.
+
+
+The architecture of the skeleton application
+============================================
+
+This skeleton application combine a middleware approach, to manage request and
+response, with the model [Action-Domain-Responder](http://pmjones.io/adr/)
+proposed by [Paul M. Jones](https://github.com/pmjones).

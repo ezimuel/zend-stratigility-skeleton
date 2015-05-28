@@ -1,6 +1,6 @@
 {
     "name": "zendframework/zend-stratigility-skeleton",
-    "description": "Middleware skeleton for PHP",
+    "description": "Zend Stratigility skeleton for PHP Middleware application based on PSR-7 standard",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -15,7 +15,28 @@
         }
     ],
     "require": {
+        "php": ">=5.5",
         "zendframework/zend-diactoros": "~1.0",
-        "zendframework/zend-stratigility": "dev-feature/template"
+        "zendframework/zend-stratigility": "~1.0",
+        "league/plates": "3.*",
+        "twbs/bootstrap": "3.*"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "3.7.*"
+    },
+    "scripts": {
+        "post-autoload-dump" : [
+            "php -r \"copy('vendor/twbs/bootstrap/dist/css/bootstrap.min.css', 'public/css/bootstrap.min.css');\"",
+            "php -r \"copy('vendor/twbs/bootstrap/dist/css/bootstrap-theme.min.css', 'public/css/bootstrap-theme.min.css');\"",
+            "php -r \"copy('vendor/twbs/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootstrap.min.js');\"",
+            "php -r 'foreach(glob(\"vendor/twbs/bootstrap/dist/fonts/*\") as $f) copy($f, \"public/fonts/\" . basename($f));'"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Action\\": "action/",
+            "App\\Domain\\": "domain/",
+            "App\\Test\\": "test/"
+        }
     }
 }

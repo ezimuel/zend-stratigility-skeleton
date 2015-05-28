@@ -1,36 +1,30 @@
 <?php
 /**
- * Proposal for a bootstrap of a middleware application
- * base on zend-stratigility component
+ * Skeleton application based on zend-stratigility
+ * for general purpose PHP web application based on middleware and PSR-7
  *
  * @author Enrico Zimuel (enrico@zend.com)
  */
 
 use Zend\Stratigility\MiddlewarePipe;
 use Zend\Diactoros\Server;
-use Zend\Stratigility\Template;
+use League\Plates\Engine as Template;
 
 require '../vendor/autoload.php';
 
-define ('TEMPLATE_PATH', dirname(__DIR__) . '/template');
-
 $app = new MiddlewarePipe();
-$template = new Template();
-$template->title = 'Skeleton application for zend-stratigility';
+$template = new Template(dirname(__DIR__) . '/template');
 
-// Landing page
+// Homepage
 $app->pipe('/', function ($req, $res, $next) use ($template) {
-    if ($req->getUri()->getPath() !== '/') {
-        return $next($req, $res);
-    }
-    $template->setFileTemplate(TEMPLATE_PATH . '/home.php');
-    $res->end($template->render());
+    $action = new App\Action\Homepage($template);
+    return $action($req, $res, $next);
 });
 
 // Another page
-$app->pipe('/foo', function ($req, $res, $next) use ($template) {
-    $template->setFileTemplate(TEMPLATE_PATH . '/foo.php');
-    $res->end($template->render(['value' => 'Bar!']));
+$app->pipe('/page', function ($req, $res, $next) use ($template) {
+    $action = new App\Action\Page($template);
+    return $action($req, $res, $next);
 });
 
 $server = Server::createServer($app, $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
