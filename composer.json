@@ -1,6 +1,6 @@
 {
     "name": "zendframework/zend-stratigility-skeleton",
-    "description": "Zend Stratigility skeleton for PHP Middleware application based on PSR-7 standard",
+    "description": "Zend Stratigility skeleton for PHP middleware application based on PSR-7 standard",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -35,7 +35,11 @@
     "autoload": {
         "psr-4": {
             "App\\Action\\": "action/",
-            "App\\Domain\\": "domain/",
+            "App\\Domain\\": "domain/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "App\\Test\\": "test/"
         }
     }
