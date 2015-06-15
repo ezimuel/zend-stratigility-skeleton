@@ -1,6 +1,6 @@
 {
     "name": "zendframework/zend-stratigility-skeleton",
-    "description": "Zend Stratigility skeleton for PHP middleware application based on PSR-7 standard",
+    "description": "Zend stratigility skeleton for PHP middleware application based on PSR-7 standard",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -11,13 +11,14 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/ezimuel/zend-stratigility"
+            "url": "https://github.com/ezimuel/zend-stratigility-dispatch"
         }
     ],
     "require": {
         "php": ">=5.5",
         "zendframework/zend-diactoros": "~1.0",
         "zendframework/zend-stratigility": "~1.0",
+        "zendframework/zend-stratigility-dispatch": "dev-master",
         "league/plates": "3.*",
         "twbs/bootstrap": "3.*"
     },

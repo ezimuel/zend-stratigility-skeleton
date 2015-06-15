@@ -5,7 +5,7 @@ namespace App\Test\Action;
 use PHPUnit_Framework_TestCase as TestCase;
 use App\Action\Homepage;
 use League\Plates\Engine as Template;
-use Zend\Diactoros\Request;
+use Zend\Diactoros\ServerRequest;
 use Zend\Diactoros\Response;
 
 class HomepageTest extends TestCase
@@ -26,20 +26,11 @@ class HomepageTest extends TestCase
 
     public function testHomepageResponse()
     {
-        $homepage = new Homepage(new Template(__DIR__ . '/../../template'));
-        $response = $homepage(new Request('/'), new Response(), null);
+        $template = new Template(__DIR__ . '/../../template');
+        $homepage = new Homepage($template);
+        $response = $homepage(new ServerRequest(array('/')), new Response(), function(){});
 
         $this->assertTrue($response instanceof Response);
-        $this->assertNotEmpty($response->getBody());
-    }
-
-    public function testHomepageWrongUri()
-    {
-        $homepage = new Homepage(new Template(__DIR__ . '/../../template'));
-        $result = $homepage(new Request('/wrong-url'), new Response(), function(){
-            return false;
-        });
-        
-        $this->assertFalse($result);
+        $this->assertEquals($template->render('home'), (string) $response->getBody());
     }
 }

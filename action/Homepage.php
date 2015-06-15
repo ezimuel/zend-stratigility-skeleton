@@ -7,6 +7,8 @@
 namespace App\Action;
 
 use League\Plates\Engine as Template;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
 
 class Homepage
 {
@@ -15,11 +17,8 @@ class Homepage
         $this->template = $template;
     }
 
-    public function __invoke($request, $response, $next)
+    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {
-        if ($request->getUri()->getPath() !== '/') {
-            return $next($request, $response);
-        }
         $response->getBody()->write($this->template->render('home'));
         return $response;
     }

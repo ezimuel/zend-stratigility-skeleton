@@ -8,7 +8,7 @@
 <?php $this->stop() ?>
 
 <div class="jumbotron">
-  <h1>Zend Stratigility skeleton</h1>
+  <h1>Zend stratigility skeleton</h1>
   <p class="lead">This is the skeleton template for PHP web application based on <strong>Middleware</strong> architecture using <strong>zend-stratigility</strong> component, compliant with <strong>PSR-7</strong> standard.</p>
   <p><strong>Middelware</strong> is an architectural code design between the HTTP request and response, and which can take the incoming request, perform actions based on it, and either complete the response or pass delegation on to the next middleware in the queue.</p>
   <p><a class="btn btn-lg btn-success" href="https://github.com/zendframework/zend-stratigility" role="button">More information</a></p>

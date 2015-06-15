@@ -7,25 +7,13 @@
  */
 
 use Zend\Stratigility\MiddlewarePipe;
+use Zend\Stratigility\Dispatch\MiddlewareDispatch;
 use Zend\Diactoros\Server;
-use League\Plates\Engine as Template;
 
 require '../vendor/autoload.php';
 
 $app = new MiddlewarePipe();
-$template = new Template(dirname(__DIR__) . '/template');
-
-// Homepage
-$app->pipe('/', function ($req, $res, $next) use ($template) {
-    $action = new App\Action\Homepage($template);
-    return $action($req, $res, $next);
-});
-
-// Another page
-$app->pipe('/page', function ($req, $res, $next) use ($template) {
-    $action = new App\Action\Page($template);
-    return $action($req, $res, $next);
-});
+$app->pipe('/', MiddlewareDispatch::factory(require '../config/route.php'));
 
 $server = Server::createServer($app, $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $server->listen();
