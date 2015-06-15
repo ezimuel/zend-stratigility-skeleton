@@ -12,7 +12,8 @@ class PageFactoryTest extends TestCase
 {
     public function testFactory()
     {
-        $response = PageFactory::factory(new ServerRequest, new Response, function(){});
+        $response = PageFactory::factory(new ServerRequest, new Response, function () {
+        });
         $this->assertTrue($response instanceof Response);
 
         $template = new Template(__DIR__ . '/../../template');

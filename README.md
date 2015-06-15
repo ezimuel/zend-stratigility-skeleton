@@ -1,5 +1,7 @@
 # zend-stratigility-skeleton
 
+[![Build Status](https://travis-ci.org/ezimuel/zend-stratigility-skeleton.svg?branch=master)](https://travis-ci.org/ezimuel/zend-stratigility-skeleton)
+
 This is a proposal for a middleware PHP skeleton application based on
 [zend-stratigility](https://github.com/zendframework/zend-stratigility) component.
 

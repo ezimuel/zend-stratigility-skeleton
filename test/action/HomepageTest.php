@@ -28,7 +28,8 @@ class HomepageTest extends TestCase
     {
         $template = new Template(__DIR__ . '/../../template');
         $homepage = new Homepage($template);
-        $response = $homepage(new ServerRequest(array('/')), new Response(), function(){});
+        $response = $homepage(new ServerRequest(['/']), new Response(), function () {
+        });
 
         $this->assertTrue($response instanceof Response);
         $this->assertEquals($template->render('home'), (string) $response->getBody());

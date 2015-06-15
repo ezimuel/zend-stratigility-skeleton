@@ -28,7 +28,8 @@ class PageTest extends TestCase
     {
         $template = new Template(__DIR__ . '/../../template');
         $homepage = new Page($template);
-        $response = $homepage(new ServerRequest(array('/page')), new Response(), function(){});
+        $response = $homepage(new ServerRequest(['/page']), new Response(), function () {
+        });
 
         $this->assertTrue($response instanceof Response);
         $this->assertEquals(
