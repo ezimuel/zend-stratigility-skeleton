@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f4a5ce9c35648675f457f0c4f50190d",
+    "hash": "94eee8802bbffcfa8dfab77cf8c988b2",
     "packages": [
         {
             "name": "aura/router",
@@ -338,16 +338,16 @@
         },
         {
             "name": "zendframework/zend-stratigility",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stratigility.git",
-                "reference": "98969e37739c6a60fc2e2151c1923478abbd89ed"
+                "reference": "ecc54a0290e0b526a154072e9410d3bd1d2b9b16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stratigility/zipball/98969e37739c6a60fc2e2151c1923478abbd89ed",
-                "reference": "98969e37739c6a60fc2e2151c1923478abbd89ed",
+                "url": "https://api.github.com/repos/zendframework/zend-stratigility/zipball/ecc54a0290e0b526a154072e9410d3bd1d2b9b16",
+                "reference": "ecc54a0290e0b526a154072e9410d3bd1d2b9b16",
                 "shasum": ""
             },
             "require": {
@@ -357,7 +357,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "3.7.*",
-                "squizlabs/php_codesniffer": "~2.0",
+                "squizlabs/php_codesniffer": "^2.3.1",
                 "zendframework/zend-diactoros": "~1.0"
             },
             "suggest": {
@@ -375,11 +375,7 @@
                     "Zend\\Stratigility\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "ZendTest\\Stratigility\\": "test/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -390,11 +386,7 @@
                 "middleware",
                 "psr-7"
             ],
-            "support": {
-                "issues": "https://github.com/zendframework/zend-stratigility/issues",
-                "source": "https://github.com/zendframework/zend-stratigility"
-            },
-            "time": "2015-05-21 17:29:52"
+            "time": "2015-06-16 12:58:05"
         },
         {
             "name": "zendframework/zend-stratigility-dispatch",
@@ -402,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezimuel/zend-stratigility-dispatch.git",
-                "reference": "ab789037bc031565bd89ab07c749f8f4d962a21d"
+                "reference": "32d6762f6ca8aef1ca9d0fca8066b1e826d69159"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezimuel/zend-stratigility-dispatch/zipball/ab789037bc031565bd89ab07c749f8f4d962a21d",
-                "reference": "ab789037bc031565bd89ab07c749f8f4d962a21d",
+                "url": "https://api.github.com/repos/ezimuel/zend-stratigility-dispatch/zipball/32d6762f6ca8aef1ca9d0fca8066b1e826d69159",
+                "reference": "32d6762f6ca8aef1ca9d0fca8066b1e826d69159",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +439,7 @@
                 "source": "https://github.com/ezimuel/zend-stratigility-dispatch/tree/master",
                 "issues": "https://github.com/ezimuel/zend-stratigility-dispatch/issues"
             },
-            "time": "2015-06-15 08:42:19"
+            "time": "2015-06-17 14:55:44"
         }
     ],
     "packages-dev": [

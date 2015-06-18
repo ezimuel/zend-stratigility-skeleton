@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Test\Action;
+namespace AppTest\Action;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use App\Action\HomepageFactory;
@@ -16,7 +16,7 @@ class HomepageFactoryTest extends TestCase
         });
         $this->assertTrue($response instanceof Response);
 
-        $template = new Template(__DIR__ . '/../../template');
+        $template = new Template(__DIR__ . '/../../app/template');
         $this->assertEquals($template->render('home'), (string) $response->getBody());
     }
 }

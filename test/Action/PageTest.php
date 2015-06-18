@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Test\Action;
+namespace AppTest\Action;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use App\Action\Page;
@@ -26,7 +26,7 @@ class PageTest extends TestCase
 
     public function testPageResponse()
     {
-        $template = new Template(__DIR__ . '/../../template');
+        $template = new Template(__DIR__ . '/../../app/template');
         $homepage = new Page($template);
         $response = $homepage(new ServerRequest(['/page']), new Response(), function () {
         });

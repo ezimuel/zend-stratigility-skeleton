@@ -6,7 +6,7 @@ return [
             'action' => 'App\Action\HomepageFactory::factory'
         ],
         'page' => [
-            'url' => '/page',
+            'url' => '/foo',
             'action' => 'App\Action\PageFactory::factory'
         ]
     ]

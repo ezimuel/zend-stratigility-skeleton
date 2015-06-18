@@ -16,8 +16,6 @@
     </rule>
 
     <!-- Paths to check -->
-    <file>action</file>
-    <file>config</file>
-    <file>domain</file>
+    <file>app/src</file>
     <file>test</file>
 </ruleset>

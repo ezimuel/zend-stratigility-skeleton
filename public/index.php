@@ -13,7 +13,7 @@ use Zend\Diactoros\Server;
 require '../vendor/autoload.php';
 
 $app = new MiddlewarePipe();
-$app->pipe('/', MiddlewareDispatch::factory(require '../config/route.php'));
+$app->pipe('/', MiddlewareDispatch::factory(require '../app/config/route.php'));
 
 $server = Server::createServer($app, $_SERVER, $_GET, $_POST, $_COOKIE, $_FILES);
 $server->listen();

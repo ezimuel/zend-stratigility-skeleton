@@ -1,6 +1,6 @@
 <?php
 /**
- * Page factory
+ * Homepage factory
  *
  * @author Enrico Zimuel (enrico@zend.com)
  */
@@ -10,11 +10,11 @@ use League\Plates\Engine as Template;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class PageFactory
+class HomepageFactory
 {
     public static function factory(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {
-        $action = new Page(new Template(dirname(__DIR__) . '/template'));
+        $action = new Homepage(new Template(__DIR__ . '/../../template'));
         return $action($request, $response, $next);
     }
 }

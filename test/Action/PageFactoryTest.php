@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Test\Action;
+namespace AppTest\Action;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use App\Action\PageFactory;
@@ -16,7 +16,7 @@ class PageFactoryTest extends TestCase
         });
         $this->assertTrue($response instanceof Response);
 
-        $template = new Template(__DIR__ . '/../../template');
+        $template = new Template(__DIR__ . '/../../app/template');
         $this->assertEquals(
             $template->render('page', [ 'value' => 'This is a test page!']),
             (string) $response->getBody()

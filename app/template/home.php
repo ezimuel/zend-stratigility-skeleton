@@ -1,4 +1,4 @@
-<?php $this->layout('template', ['title' => 'Home page']) ?>
+<?php $this->layout('layout', ['title' => 'Home page']) ?>
 
 <?php $this->start('navbar') ?>
 <ul class="nav navbar-nav">

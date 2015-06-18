@@ -36,13 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\Action\\": "action/",
-            "App\\Domain\\": "domain/"
+            "App\\": "app/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Test\\": "test/"
+            "AppTest\\": "test/"
         }
     }
 }
