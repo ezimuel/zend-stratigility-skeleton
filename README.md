@@ -76,7 +76,7 @@ into `http` block if it does not already exist:
     }
 
 
-Create a virtual host configuration file for your project under `/path/to/nginx/sites-enabled/zf2-app.localhost.conf`
+Create a virtual host configuration file for your project under `/path/to/nginx/sites-enabled/stratigility-skeleton.localhost.conf`
 it should look something like below:
 
     server {
@@ -167,7 +167,9 @@ following signature:
 ```
 
 and return a *callable* with `$next($request, $response)` or return a *response*
-with `$response`. In the skeleton we provided two invokable classes `Homepage` and
+with `$response`.
+
+In the skeleton we provided two invokable classes `Homepage` and
 `Page` that return a $response.
 
 We used also factory classes to create the instance of the actions. We used the
