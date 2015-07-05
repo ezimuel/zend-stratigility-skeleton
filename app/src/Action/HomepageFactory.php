@@ -14,7 +14,7 @@ class HomepageFactory
 {
     public static function factory(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {
-        $action = new Homepage(new Template(__DIR__ . '/../../template'));
+        $action = new Homepage(new Template('app/template'));
         return $action($request, $response, $next);
     }
 }
