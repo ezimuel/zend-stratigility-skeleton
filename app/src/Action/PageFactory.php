@@ -14,7 +14,7 @@ class PageFactory
 {
     public static function factory(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {
-        $action = new Page(new Template(__DIR__ . '/../../template'));
+        $action = new Page(new Template('app/template'));
         return $action($request, $response, $next);
     }
 }
